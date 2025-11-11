@@ -92,6 +92,26 @@ body {
     color: #fff;
     padding: 4rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
@@ -185,6 +205,19 @@ section {
     background-color: #fff;
 }
 
+.section-image-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 .warning-signs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -230,11 +263,23 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -323,6 +368,22 @@ section {
     padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.testimonial-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px solid #ffc107;
+}
+
+.testimonial-content {
+    flex: 1;
 }
 
 .testimonial-text {
@@ -344,6 +405,26 @@ section {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: #fff;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/electrician-working.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .cta-section .section-title {
@@ -599,6 +680,21 @@ section {
 
     .testimonial-card {
         padding: 2rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .testimonial-author {
+        text-align: center;
+    }
+
+    .section-image {
+        max-width: 100%;
     }
 
     .scroll-to-top {
